@@ -97,27 +97,22 @@ export const dummyRigthSidebarData = [
 
 export const dummyRightSideTag = [
   {
-    _id: 1,
     tag: "NEXTJS",
     num: 32
   },
   {
-    _id: 2,
     tag: "TEST",
     num: 20
   },
   {
-    _id: 3,
     tag: "REACT",
     num: 18
   },
   {
-    _id: 4,
     tag: "CSS",
     num: 12
   },
   {
-    _id: 5,
     tag: "NEXT JS",
     num: 9
   }
