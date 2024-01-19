@@ -71,3 +71,54 @@ export const BADGE_CRITERIA = {
     GOLD: 100000,
   },
 };
+
+export const dummyRigthSidebarData = [
+  {
+    _id: 1,
+    title: "Best practices for data fetching in a Next.js application with Server-Side Rendering (SSR)?"
+  },
+  {
+    _id: 2,
+    title: "Is it only me or the font is bolder than necessary?"
+  },
+  {
+    _id: 3,
+    title: "Can I get the course for free?"
+  },
+  {
+    _id: 4,
+    title:  "Redux Toolkit Not Updating State as Expected",
+  },
+  {
+    _id: 5,
+    title: "Async/Await Function Not Handling Errors Properly"
+  }
+]
+
+export const dummyRightSideTag = [
+  {
+    _id: 1,
+    tag: "NEXTJS",
+    num: 32
+  },
+  {
+    _id: 2,
+    tag: "TEST",
+    num: 20
+  },
+  {
+    _id: 3,
+    tag: "REACT",
+    num: 18
+  },
+  {
+    _id: 4,
+    tag: "CSS",
+    num: 12
+  },
+  {
+    _id: 5,
+    tag: "NEXT JS",
+    num: 9
+  }
+]
