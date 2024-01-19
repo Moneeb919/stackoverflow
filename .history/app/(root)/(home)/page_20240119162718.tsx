@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import LocalSearchbar from "@/components/shared/search/LocalSearchbar";
-// import Filters from "@/components/shared/Filters";
+import Filters from "@/components/shared/Filters";
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
           otherClasses="flex-1"
           iconPosition="left"
         />
-        {/* <Filters /> */}
+        <Filters />
       </div>
     </>
   );
