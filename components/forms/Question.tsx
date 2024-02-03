@@ -3,6 +3,7 @@
 import React, { useRef, useState } from "react";
 import { Editor } from "@tinymce/tinymce-react";
 import Image from "next/image";
+import { useRouter, usePathname } from "next/navigation";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -25,7 +26,13 @@ import { createQuestion } from "@/lib/actions/question.action";
 
 const type: any = "create";
 
-const Question = () => {
+interface QuestionProps {
+  mongoUserId: string;
+}
+
+const Question = ({ mongoUserId }: QuestionProps) => {
+  const router = useRouter();
+  const pathname = usePathname();
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const editorRef = useRef(null);
 
@@ -43,7 +50,14 @@ const Question = () => {
     setIsSubmitting(true);
     console.log("submititng");
     try {
-      await createQuestion({});
+      await createQuestion({
+        title: values.title,
+        content: values.explanation,
+        tags: values.tags,
+        author: JSON.parse(mongoUserId),
+      });
+
+      router.push("/");
     } catch (error) {
     } finally {
       setIsSubmitting(false);
