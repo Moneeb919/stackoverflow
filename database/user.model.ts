@@ -11,7 +11,6 @@ interface userModel extends Document {
     location?: string
     githubLink?: string
     joinedAt: Date
-    dob: Date
     questions: Schema.Types.ObjectId[]
     answers: Schema.Types.ObjectId[]
     // upvotes: Schema.Types.ObjectId[]
@@ -59,11 +58,6 @@ const userSchema = new Schema<userModel>({
     joinedAt: {
         type: Date,
         default: Date.now
-    },
-
-    dob: {
-        type: Date,
-        required: true
     },
 
     questions: [{
