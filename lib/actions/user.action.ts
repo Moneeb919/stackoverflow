@@ -57,7 +57,8 @@ export async function deleteUser(params: DeleteUserParams){
 
         // delete the user from database
         // delete questions, answers, comments etc
-
+        
+        // eslint-disable-next-line no-unused-vars
         const userQuestionIds = await Question.find({ author: user._id }).distinct('_id');
 
         // delete user questions
