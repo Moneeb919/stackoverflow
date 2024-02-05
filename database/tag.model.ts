@@ -1,15 +1,15 @@
 import { Schema, models, model, Document } from "mongoose";
 
 interface tagModel extends Document {
-    title: string
+    name: string
     description: string
     followers: Schema.Types.ObjectId[]
     questions: Schema.Types.ObjectId[]
-    createdAt: Date
+    createdOn: Date
 }
 
 const tagSchema = new Schema<tagModel>({
-    title: {
+    name: {
         type: String,
         required: true,
         unique: true
@@ -30,7 +30,7 @@ const tagSchema = new Schema<tagModel>({
         ref: 'Question'
     }],
 
-    createdAt: {
+    createdOn: {
         type: Date,
         default: Date.now
     }
